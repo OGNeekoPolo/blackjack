@@ -114,6 +114,12 @@ class Game
       @win_tracker += 1
       @bank += 20
       new_game?
+    elsif @dealer_value > 17 && @dealer_value == @player_value
+      puts "You and the dealer have the same value of #{@player_value}"
+      puts "That was close....but YOU WIN!!!"
+      @win_tracker += 1
+      @bank += 20
+      new_game?
     elsif @dealer_value > 17 && @dealer_value > @player_value
       puts "The dealers hand of #{@dealer_value} is better than your hand of #{@player_value}"
       puts "YOU LOSE!!"

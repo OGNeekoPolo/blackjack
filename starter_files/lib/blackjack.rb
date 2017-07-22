@@ -134,7 +134,7 @@ class Game
       @player_value = @player_hand.reduce(0) {|sum, value| sum + value.value}
       if @player_value <= 21
         puts "You ended up drawing a #{@player_hand[2]}"
-        puts "You hand has a new value of #{@player_value}."
+        puts "Your hand has a new value of #{@player_value}."
         puts "Would you like another hit?"
         hit = gets.chomp.downcase
         if hit == "y"
